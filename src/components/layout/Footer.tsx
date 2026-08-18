@@ -2,14 +2,14 @@ import { GithubIcon, LinkedinIcon, LeetCodeIcon } from '../ui/Icons'
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 py-10 px-4 sm:px-6">
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+    <footer className="w-full border-t border-white/5 py-10 px-4 sm:px-6">
+      <div className="w-full max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
         <p className="text-sm text-slate-500 text-center sm:text-left">
           Designed & Built by{' '}
           <span className="gradient-text font-semibold">Muthuvel S.</span>{' '}
           © 2026
         </p>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center justify-center gap-4">
           <a
             href="https://github.com/muthuvel-24"
             target="_blank"

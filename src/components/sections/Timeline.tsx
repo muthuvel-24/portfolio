@@ -9,7 +9,6 @@ const typeConfig = {
     color: 'text-emerald-400',
     bg: 'bg-emerald-500/10 border-emerald-500/30',
     dotColor: 'bg-emerald-400',
-    lineBg: 'from-emerald-500/50',
     label: 'Education',
   },
   experience: {
@@ -17,7 +16,6 @@ const typeConfig = {
     color: 'text-cyan-400',
     bg: 'bg-cyan-500/10 border-cyan-500/30',
     dotColor: 'bg-cyan-400',
-    lineBg: 'from-cyan-500/50',
     label: 'Experience',
   },
   certification: {
@@ -25,7 +23,6 @@ const typeConfig = {
     color: 'text-amber-400',
     bg: 'bg-amber-500/10 border-amber-500/30',
     dotColor: 'bg-amber-400',
-    lineBg: 'from-amber-500/50',
     label: 'Certification',
   },
 }
@@ -37,29 +34,31 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: isLeft ? -30 : 30 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.55, delay: index * 0.1, ease: 'easeOut' }}
-      className={`relative flex items-center gap-6 lg:gap-0 ${isLeft ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
+      transition={{ duration: 0.5, delay: index * 0.08, ease: 'easeOut' }}
+      className={`relative flex items-center w-full ${
+        isLeft ? 'lg:flex-row' : 'lg:flex-row-reverse'
+      }`}
     >
-      {/* Card — takes up half the width on desktop */}
-      <div className={`flex-1 ${isLeft ? 'lg:pr-16 lg:text-right' : 'lg:pl-16 lg:text-left'}`}>
-        <div className="glass card-hover rounded-2xl p-5 sm:p-6 border border-white/[0.07] hover:border-white/15">
-          {/* Type badge */}
-          <div
-            className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold border mb-3 ${config.bg} ${config.color}`}
-          >
-            <Icon size={11} />
-            {config.label}
+      {/* Card container */}
+      <div className={`w-full lg:w-1/2 ${isLeft ? 'lg:pr-10' : 'lg:pl-10'}`}>
+        <div className="glass card-hover rounded-2xl p-5 sm:p-6 border border-white/[0.07] hover:border-white/15 text-left">
+          {/* Top row: badge & period */}
+          <div className="flex items-center justify-between gap-2 mb-3 flex-wrap">
+            <div
+              className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold border ${config.bg} ${config.color}`}
+            >
+              <Icon size={11} />
+              {config.label}
+            </div>
+            <span className="text-xs text-slate-500 font-mono">{item.period}</span>
           </div>
-
-          {/* Period */}
-          <div className="text-xs text-slate-500 mb-1.5 font-mono">{item.period}</div>
 
           {/* Title */}
           <h3
-            className="text-base sm:text-lg font-semibold text-white mb-1 leading-snug"
+            className="text-base sm:text-lg font-bold text-white mb-1 leading-snug"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             {item.title}
@@ -70,42 +69,43 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
 
           {/* Grade or detail */}
           {item.grade && (
-            <span className={`inline-flex items-center gap-1 text-xs font-medium ${config.color}`}>
+            <span className={`inline-flex items-center gap-1 text-xs font-semibold ${config.color}`}>
               {item.grade}
             </span>
           )}
           {item.detail && (
-            <p className="text-xs text-slate-500 leading-relaxed">{item.detail}</p>
+            <p className="text-xs text-slate-400/90 leading-relaxed mt-1">{item.detail}</p>
           )}
         </div>
       </div>
 
       {/* Center dot (desktop only) */}
-      <div className="hidden lg:flex flex-col items-center absolute left-1/2 -translate-x-1/2">
-        <div className={`w-4 h-4 rounded-full border-2 border-bg-primary ${config.dotColor} z-10`} />
+      <div className="hidden lg:flex items-center justify-center absolute left-1/2 -translate-x-1/2 z-10">
+        <div className={`w-3.5 h-3.5 rounded-full border-2 border-[#090D16] ${config.dotColor} ring-4 ring-white/5`} />
       </div>
 
-      {/* Right/Left spacer */}
-      <div className="flex-1 hidden lg:block" />
+      {/* Empty space for opposite side on desktop */}
+      <div className="hidden lg:block w-1/2" />
     </motion.div>
   )
 }
 
 export default function Timeline() {
   return (
-    <section id="timeline" className="section-padding">
-      <div className="max-w-5xl mx-auto">
+    <section id="timeline" className="section-padding flex flex-col items-center justify-center">
+      <div className="w-full max-w-4xl mx-auto px-4 sm:px-6">
         <SectionHeader
           eyebrow="Background"
           title="Education & Experience"
-          subtitle="My academic journey, hands-on experience, and professional certifications."
+          subtitle="My academic foundation, software engineering training, and verified credentials."
         />
 
-        {/* Vertical line (desktop) */}
-        <div className="relative">
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-500/30 via-cyan-500/20 to-transparent -translate-x-1/2" />
+        {/* Timeline wrapper */}
+        <div className="relative w-full">
+          {/* Vertical central line (desktop) */}
+          <div className="hidden lg:block absolute left-1/2 top-4 bottom-4 w-px bg-gradient-to-b from-emerald-500/40 via-cyan-500/30 to-emerald-500/10 -translate-x-1/2" />
 
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6 sm:gap-7 w-full">
             {timeline.map((item, index) => (
               <TimelineCard key={item.id} item={item} index={index} />
             ))}

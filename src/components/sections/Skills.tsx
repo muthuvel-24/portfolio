@@ -13,47 +13,56 @@ const accentColors = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="section-padding">
-      <div className="max-w-6xl mx-auto">
+    <section id="skills" className="section-padding flex flex-col items-center justify-center">
+      <div className="w-full max-w-5xl mx-auto px-4 sm:px-6">
         <SectionHeader
           eyebrow="Technical Arsenal"
           title="Skills & Technologies"
           subtitle="A breadth-first toolkit spanning frontend, backend, databases, and core computer science fundamentals."
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+        {/* 6-column grid: top 3 cards span 2 cols each, bottom 2 cards span 3 cols each -> perfectly symmetric */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-5 w-full">
           {skillCategories.map((category, catIndex) => {
             const colors = accentColors[catIndex % accentColors.length]
-            return (
-              <BentoCard key={category.category} delay={catIndex * 0.08}>
-                <div className="p-6 sm:p-7">
-                  {/* Category Header */}
-                  <div className="flex items-center gap-3 mb-5">
-                    <span className="text-2xl">{category.icon}</span>
-                    <h3
-                      className="text-base font-semibold text-white"
-                      style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-                    >
-                      {category.category}
-                    </h3>
-                  </div>
+            const colSpan = catIndex < 3 ? 'lg:col-span-2' : 'lg:col-span-3'
 
-                  {/* Skills */}
-                  <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill, i) => (
-                      <motion.span
-                        key={skill}
-                        initial={{ opacity: 0, scale: 0.85 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: catIndex * 0.05 + i * 0.04, duration: 0.3 }}
-                        whileHover={{ scale: 1.05 }}
-                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-200 cursor-default ${colors.tag}`}
+            return (
+              <BentoCard
+                key={category.category}
+                delay={catIndex * 0.08}
+                className={`col-span-1 md:col-span-1 ${colSpan}`}
+              >
+                <div className="p-6 sm:p-7 h-full flex flex-col justify-between">
+                  <div>
+                    {/* Category Header */}
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-2xl">{category.icon}</span>
+                      <h3
+                        className="text-base font-semibold text-white"
+                        style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                       >
-                        <span className={`w-1.5 h-1.5 rounded-full ${colors.dot}`} />
-                        {skill}
-                      </motion.span>
-                    ))}
+                        {category.category}
+                      </h3>
+                    </div>
+
+                    {/* Skills */}
+                    <div className="flex flex-wrap gap-2">
+                      {category.skills.map((skill, i) => (
+                        <motion.span
+                          key={skill}
+                          initial={{ opacity: 0, scale: 0.85 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: catIndex * 0.05 + i * 0.04, duration: 0.3 }}
+                          whileHover={{ scale: 1.05 }}
+                          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-200 cursor-default ${colors.tag}`}
+                        >
+                          <span className={`w-1.5 h-1.5 rounded-full ${colors.dot}`} />
+                          {skill}
+                        </motion.span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </BentoCard>

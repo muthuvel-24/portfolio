@@ -8,33 +8,33 @@ import Contact from './components/sections/Contact'
 
 export default function App() {
   return (
-    <div className="min-h-screen" style={{ background: '#090D16' }}>
+    <div className="min-h-screen w-full flex flex-col items-center justify-start overflow-x-hidden bg-[#090D16]">
       <Navbar />
 
-      <main>
+      <main className="w-full flex flex-col items-center justify-center">
         <Hero />
 
-        {/* Subtle divider */}
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        {/* Subtle centered divider */}
+        <div className="w-full max-w-5xl mx-auto px-6">
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
         </div>
 
         <Projects />
 
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="w-full max-w-5xl mx-auto px-6">
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
         </div>
 
         <Skills />
 
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="w-full max-w-5xl mx-auto px-6">
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
         </div>
 
         <Timeline />
 
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="w-full max-w-5xl mx-auto px-6">
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
         </div>
 
         <Contact />

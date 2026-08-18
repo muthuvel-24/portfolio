@@ -19,19 +19,19 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden section-padding"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden section-padding text-center"
     >
       {/* Background Orbs */}
       <div
-        className="orb w-[500px] h-[500px] opacity-20 -top-32 -left-32"
+        className="orb w-[480px] h-[480px] opacity-20 -top-24 left-1/2 -translate-x-1/2"
         style={{ background: 'radial-gradient(circle, #10B981, transparent 70%)' }}
       />
       <div
-        className="orb w-[400px] h-[400px] opacity-15 top-1/2 -right-40"
+        className="orb w-[380px] h-[380px] opacity-15 top-1/3 -right-20"
         style={{ background: 'radial-gradient(circle, #06B6D4, transparent 70%)' }}
       />
       <div
-        className="orb w-[300px] h-[300px] opacity-10 bottom-0 left-1/3"
+        className="orb w-[320px] h-[320px] opacity-10 bottom-10 -left-20"
         style={{ background: 'radial-gradient(circle, #8B5CF6, transparent 70%)' }}
       />
 
@@ -44,7 +44,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto w-full">
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 flex flex-col items-center justify-center">
         <motion.div
           initial="hidden"
           animate="show"
@@ -55,7 +55,7 @@ export default function Hero() {
               transition: { staggerChildren: 0.12, delayChildren: 0.2 },
             },
           }}
-          className="flex flex-col items-center text-center"
+          className="flex flex-col items-center justify-center text-center w-full"
         >
           {/* Location Badge */}
           <motion.div
@@ -64,7 +64,7 @@ export default function Hero() {
               show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
             }}
           >
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium text-slate-300 glass mb-8 border border-white/10">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium text-slate-300 glass mb-6 border border-white/10">
               <MapPin size={12} className="text-emerald-400" />
               {personalInfo.location}
             </span>
@@ -76,7 +76,7 @@ export default function Hero() {
               hidden: { opacity: 0, y: 20 },
               show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
             }}
-            className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-white mb-4 leading-[1.05]"
+            className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-3 leading-[1.1] text-center"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             {personalInfo.name.split(' ')[0]}{' '}
@@ -89,7 +89,7 @@ export default function Hero() {
               hidden: { opacity: 0, y: 20 },
               show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
             }}
-            className="text-base sm:text-xl font-medium text-slate-300 mb-6 max-w-2xl tracking-wide"
+            className="text-base sm:text-xl font-medium text-slate-300 mb-5 max-w-2xl tracking-wide text-center"
           >
             {personalInfo.title}
           </motion.p>
@@ -100,7 +100,7 @@ export default function Hero() {
               hidden: { opacity: 0, scaleX: 0 },
               show: { opacity: 1, scaleX: 1, transition: { duration: 0.5, ease: 'easeOut' } },
             }}
-            className="w-16 h-px bg-gradient-to-r from-emerald-500 to-cyan-500 mb-8"
+            className="w-16 h-0.5 bg-gradient-to-r from-emerald-500 to-cyan-500 mb-6 rounded-full"
           />
 
           {/* Bio */}
@@ -109,7 +109,7 @@ export default function Hero() {
               hidden: { opacity: 0, y: 20 },
               show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
             }}
-            className="text-slate-400 text-base sm:text-lg leading-relaxed max-w-xl mb-10"
+            className="text-slate-400 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mb-9 text-center"
           >
             {personalInfo.bio}
           </motion.p>
@@ -120,7 +120,7 @@ export default function Hero() {
               hidden: { opacity: 0, y: 20 },
               show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
             }}
-            className="flex flex-wrap items-center justify-center gap-4 mb-12"
+            className="flex flex-wrap items-center justify-center gap-3.5 mb-10"
           >
             <motion.button
               onClick={scrollToProjects}
@@ -150,7 +150,7 @@ export default function Hero() {
               hidden: { opacity: 0, y: 20 },
               show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
             }}
-            className="flex items-center gap-2"
+            className="flex items-center justify-center gap-2.5 flex-wrap"
           >
             {socialLinks.map((link) => (
               <motion.a
@@ -160,7 +160,7 @@ export default function Hero() {
                 rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 whileHover={{ scale: 1.12, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className={`p-3 text-slate-500 ${link.color} glass rounded-xl transition-all duration-200 border border-white/5 hover:border-white/15 flex items-center justify-center`}
+                className={`p-3 text-slate-400 ${link.color} glass rounded-xl transition-all duration-200 border border-white/5 hover:border-white/15 flex items-center justify-center`}
                 aria-label={link.label}
                 title={link.label}
               >
@@ -176,7 +176,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
         <motion.div
           animate={{ y: [0, 6, 0] }}
