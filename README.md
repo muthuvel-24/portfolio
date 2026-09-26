@@ -1,90 +1,161 @@
-# Muthuvel S. — Personal Developer Portfolio
+# Muthuvel S. — Developer Portfolio
 
 <div align="center">
 
-![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-13-black?style=for-the-badge&logo=framer)
-![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite)
+### Computer Science Engineering Student • Java • Full Stack • AI
 
-A modern, high-performance personal developer portfolio built with a Bento-Grid layout, dark obsidian glassmorphism, fluid micro-interactions, and responsive design.
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev/)
 
-[Live Demo](http://localhost:5173) • [Report Bug](https://github.com/muthuvel-24/portfolio/issues)
+**A modern developer portfolio showcasing full-stack, AI, and software-engineering projects.**
+
+[GitHub](https://github.com/muthuvel-24) • [LeetCode](https://leetcode.com/) • [LinkedIn](https://www.linkedin.com/)
 
 </div>
 
 ---
 
-## 🎨 Design System & Aesthetic
+## 👨‍💻 About
 
-- **Style:** Modern Bento-Grid layout with subtle glassmorphism (`backdrop-blur-md`, `bg-white/[0.03]`, `border border-white/10`).
-- **Color Palette:**
-  - Background: Deep Slate / Obsidian Dark (`#090D16` / `#0B0F17`)
-  - Card Surfaces: Charcoal Zinc (`#111827` at 50% opacity)
-  - Accents: Subtle Emerald (`#10B981`) & Electric Cyan (`#06B6D4`)
-  - Typography: Bright White (`#F9FAFB`) & Slate Grey (`#94A3B8`)
-- **Typography:** Space Grotesk (headings) & Inter (body)
-- **Micro-Interactions:** Smooth scrolling, card hover elevations, glow badges, and animated timeline.
+This portfolio presents my work as a Computer Science Engineering student with a focus on **Java, full-stack development, AI-assisted applications, and problem solving**.
+
+It highlights selected projects, technical skills, education, experience, certifications, and ways to connect with me.
+
+## 🚀 Featured Projects
+
+### 🤖 AI Software Engineering Assistant
+
+A multi-agent developer workspace focused on software-engineering workflows such as requirement analysis, code generation, security-focused code review, schema generation, and automated testing.
+
+**Stack:** React • TypeScript • Spring Boot • Java • PostgreSQL • AI workflows
+
+[View Repository →](https://github.com/muthuvel-24/AI-Software-Engineering)
+
+### 🎯 AI Interview Preparation Platform
+
+A full-stack interview-preparation platform featuring resume analysis, MCQ tests, coding challenges, and AI-driven interview practice.
+
+**Stack:** Next.js • Node.js • Express • PostgreSQL • JWT • Google OAuth
+
+[View Repository →](https://github.com/muthuvel-24/AI-interview-preparation)
+
+### 📰 Fake News Detection System
+
+An NLP-based machine-learning project for classifying news using text-processing and machine-learning techniques.
+
+[View Repository →](https://github.com/muthuvel-24/fake-news-detection)
+
+### 🏥 Healthcare Management System
+
+A healthcare management application covering patient records, appointments, billing, CRUD operations, and appointment scheduling.
+
+[View Repository →](https://github.com/muthuvel-24/Health-care-management-system)
+
+### 🌐 Custom Web Browser
+
+A browser project focused on desktop browsing functionality and tab management.
+
+[View Repository →](https://github.com/muthuvel-24/browser)
+
+### 💱 Currency Converter
+
+A currency-conversion application demonstrating API integration and full-stack development.
+
+[View Repository →](https://github.com/muthuvel-24/Currency-Converer)
 
 ---
 
-## 🚀 Key Sections & Features
+## 🧠 Problem Solving
 
-1. **Header & Navigation:** Sticky frosted-glass navbar with smooth scroll anchors and mobile drawer menu.
-2. **Hero Section:** Animated gradient headline, interactive location badge, resume download button, and social link badges (GitHub, LinkedIn, LeetCode, Email, Phone).
-3. **Projects (Bento Grid):**
-   - **AI Software Engineering Assistant (Flagship Card)** — Multi-agent autonomous developer workspace.
-   - **Fake News Detection System** — NLP classification pipeline.
-   - **Healthcare Management System** — Hospital management software with CRUD workflows.
-   - **Currency Converter** — Dynamic exchange rate calculator.
-   - **Custom Web Browser** — Java desktop browser with tab management.
-4. **Technical Arsenal (Skills):** Categorized glass cards for Frontend, Backend, Databases, Core CS, and Developer Tools.
-5. **Education & Experience Timeline:** Alternating vertical timeline highlighting academic background, DSA internship, and certifications.
-6. **Contact & Footer:** Direct email card with one-click copy feedback, social links, and clean footer credits.
+I practice Data Structures and Algorithms in Java and maintain a dedicated repository for my LeetCode solutions.
+
+**Focus areas:**
+
+- Arrays & Strings
+- Hashing
+- Sliding Window
+- Binary Search
+- Linked Lists
+- Trees
+- Dynamic Programming
+- Sorting & Searching
+- Time & Space Complexity
+
+[View LeetCode Solutions →](https://github.com/muthuvel-24/Leetcode)
 
 ---
 
-## 🛠️ Getting Started
+## 🛠️ Technical Skills
+
+| Area | Technologies |
+|---|---|
+| Languages | Java, JavaScript, TypeScript, SQL, Python |
+| Frontend | React, Next.js, HTML, CSS, Tailwind CSS |
+| Backend | Spring Boot, Node.js, Express |
+| Databases | PostgreSQL, MySQL |
+| AI / ML | AI APIs, LangGraph, NLP, Machine Learning |
+| Authentication | JWT, Google OAuth |
+| Tools | Git, GitHub, VS Code, IntelliJ IDEA |
+
+---
+
+## 🎨 Design
+
+The portfolio uses a modern **Bento Grid + glassmorphism** visual style with responsive layouts and subtle motion effects.
+
+### Highlights
+
+- Responsive navigation
+- Bento-style project showcase
+- Animated project cards
+- Skills organized by category
+- Education and experience timeline
+- Resume and contact actions
+- Responsive mobile layout
+
+---
+
+## ▶️ Run Locally
 
 ### Prerequisites
-- Node.js (v18 or higher)
-- npm or pnpm or yarn
+
+- Node.js 18+
+- npm, pnpm, or yarn
 
 ### Installation
 
 ```bash
-# Clone the repository
 git clone https://github.com/muthuvel-24/portfolio.git
-
-# Navigate to project directory
 cd portfolio
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
 ```
 
-### Production Build
+Open the local development URL shown by Vite.
+
+### Production build
 
 ```bash
-# Build optimized production bundle
 npm run build
-
-# Preview production build
 npm run preview
 ```
 
 ---
 
+## 📌 Repository
+
+This repository contains the source code for my personal developer portfolio.
+
+**GitHub:** https://github.com/muthuvel-24
+
 ## 📄 License
 
-This project is licensed under the MIT License.
-
----
+MIT License
 
 <div align="center">
-Designed & Built with ❤️ by <strong>Muthuvel S.</strong>
+
+**Designed & Built by Muthuvel S.**
+
 </div>
